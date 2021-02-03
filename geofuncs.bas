@@ -77,7 +77,7 @@ End Function
 
 Public Function radians_to_bearing(r As Single) As String
 
-    radians_to_bearing = bearing_from_azimuth(radians_to_azimuth(r))
+    radians_to_bearing = azimuth_to_bearing(radians_to_azimuth(r))
 
 End Function
 
