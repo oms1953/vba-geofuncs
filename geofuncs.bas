@@ -27,7 +27,7 @@ Public Function bearing_to_azimuth(s As String) As Single
 End Function
 
 
-Public Function bearing_from_azimuth(d As Single) As String
+Public Function azimuth_to_bearing(d As Single) As String
     Dim a As Single, b As Single
     Dim ans As String
     
@@ -56,7 +56,7 @@ Public Function bearing_from_azimuth(d As Single) As String
         ans = "N " & CStr(a) & " " & CStr(b) & " W"
     End If
     
-    bearing_from_azimuth = ans
+    azimuth_to_bearing = ans
     
 End Function
 
@@ -99,7 +99,7 @@ Public Function distance(a As Single, b As Single) As Single
 
 End Function
 
-Public Function tek_to_dxdy(bearing As String, distance As Double) As Variant
+Public Function tek_to_dxdy(bearing As String, distance As Single) As Variant
     
     Dim r: r = bearing_to_radians(bearing)
     Dim dx: dx = distance * Cos(r)
